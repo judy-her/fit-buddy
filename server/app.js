@@ -99,7 +99,7 @@ app.use(
 //connected to cluster in mongoDb Atlas
 mongoose
   .connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.n61iu0b.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&appName=Cluster0`
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.cp4mmc3.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&appName=Cluster0``mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_CLUSTER}/?retryWrites=true&w=majority&appName=FitBuddy`
   )
   .then(() => {
     app.listen(3002);
@@ -107,5 +107,3 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
-  mongodb+srv://judith85dm:<password>@cluster0.n61iu0b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

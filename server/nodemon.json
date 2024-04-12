@@ -1,7 +1,7 @@
 {
   "env": {
     "MONGO_USER": "judith85dm",
-    "MONGO_PASSWORD": "njaFei1Co81r42fq",
-    "MONGO_DB": "mongoDb-connect"
+    "MONGO_PASSWORD": "P1wQjbiY35s1Zuu5",
+    "MONGO_CLUSTER": "fitbuddy.nzinz29.mongodb.net"
   }
 }
