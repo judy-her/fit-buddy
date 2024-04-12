@@ -1,13 +1,14 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
+import { NextUIProvider } from "@nextui-org/react";
 import App from "./App.jsx";
 import "./index.css";
 
 //import all pages
 import Dashboard from "./pages/Dashboard.jsx";
 import Explore from "./pages/Explore.jsx";
-import Excercises from "./pages/Excercises.jsx";
+import Exercise from "./pages/Exercises.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LogIn from "./pages/LogIn.jsx";
 
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/excercises",
-        element: <Excercises />,
+        element: <Exercise />,
       },
       {
         path: "/dashboard",
@@ -38,5 +39,11 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={router}>
+    <NextUIProvider>
+      <main className="dark text-foreground bg-background">
+        <App />
+      </main>
+    </NextUIProvider>
+  </RouterProvider>
 );
