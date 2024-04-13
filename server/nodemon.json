@@ -1,7 +1,9 @@
-{
-  "env": {
-    "MONGO_USER": "judith85dm",
-    "MONGO_PASSWORD": "P1wQjbiY35s1Zuu5",
-    "MONGO_CLUSTER": "fitbuddy.nzinz29.mongodb.net"
-  }
-}
+// {
+//   "env": {
+//     "MONGO_USER": "judith85dm",
+//     "MONGO_PASSWORD": "P1wQjbiY35s1Zuu5",
+//     "MONGO_CLUSTER": "fitbuddy.nzinz29.mongodb.net"
+//   }
+// }
+
+// TODOignore this for now
