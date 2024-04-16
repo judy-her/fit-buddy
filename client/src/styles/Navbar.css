@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --main-font-family: 'Poiret One', sans-serif;
+  --linear-gradient: linear-gradient(45deg, pink, purple, blue);
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  background-color: #ec9a00;
+  margin: 0;
+  width: 100vw;
+  height: 100px;
+}
+.logo {
+  color: #f49867;
+  font-size: 50px;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 70px;
+  text-decoration: none;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(
+    50.1deg,
+    rgba(2, 2, 124),
+    #ae67fa,
+    #f49867
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+
+  /* flex-wrap: wrap; */
+}
+
+.nav-item {
+  justify-items: end;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-right: 20px;
+  color: pink;
+  font-family: var(--main-font-family);
+}
+
+.navbar-toggler {
+  background-color: pink;
+}
+.active {
+  background-color: rgb(167, 68, 242);
+}
+
+.gradient-background {
+  background: linear-gradient(
+    45deg,
+    #020782,
+    #4d0278,
+    black,
+    #250482,
+    #4a0970,
+    black,
+    #290b95,
+    hsl(0, 0%, 5%)
+  );
+  background-size: 1200% 1200%;
+  -webkit-animation: AnimationName 18s ease infinite;
+  -moz-animation: AnimationName 18s ease infinite;
+  -o-animation: AnimationName 18s ease infinite;
+  animation: AnimationName 18s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
