@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 :root {
   --pale-green: rgb(231, 243, 234);
   --apple-green: rgb(169, 206, 123);
@@ -95,9 +98,6 @@
 }
 
 /* NOTE from react portfolio */
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 root {
   --main-font-family: 'Philosopher', sans-serif;
