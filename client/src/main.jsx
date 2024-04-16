@@ -1,20 +1,22 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ReactDOM from "react-dom/client";
-import { NextUIProvider } from "@nextui-org/react";
-import App from "./App.jsx";
-import "./index.css";
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import { NextUIProvider } from '@nextui-org/react';
+import App from './App.jsx';
+import './index.css';
+import '../src/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import all pages
-import Dashboard from "./pages/Dashboard.jsx";
-import Explore from "./pages/Explore.jsx";
-import Exercise from "./pages/Exercises.jsx";
-import ErrorPage from "./pages/ErrorPage.jsx";
-import LogIn from "./pages/LogIn.jsx";
+import Dashboard from './pages/Dashboard.jsx';
+import Explore from './pages/Explore.jsx';
+import Exercise from './pages/Exercises.jsx';
+import ErrorPage from './pages/ErrorPage.jsx';
+import LogIn from './pages/LogIn.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
@@ -23,22 +25,22 @@ const router = createBrowserRouter([
         element: <LogIn />,
       },
       {
-        path: "/excercises",
+        path: '/excercises',
         element: <Exercise />,
       },
       {
-        path: "/dashboard",
+        path: '/dashboard',
         element: <Dashboard />,
       },
       {
-        path: "/explore",
+        path: '/explore',
         element: <Explore />,
       },
     ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router}>
     <NextUIProvider>
       <main className="dark text-foreground bg-background">
