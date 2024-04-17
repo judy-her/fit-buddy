@@ -1,59 +1,89 @@
-// Import necessary modules/models
-const { Workout, Exercise, User } = require("../models");
+// const Exercise = require('../models/Exercise');
+
+// const resolvers = {
+// 	Query: {
+// 		exercises: async () => {
+// 			return Exercise.find();
+// 		},
+
+// 		exercise: async (parent, { exerciseId }) => {
+// 			return Exercise.findOne({ _id: exerciseId });
+// 		},
+// 	},
+
+// 	Mutation: {
+// 		addExercise: async (parent, { exerciseTitle, exerciseAuthor }) => {
+// 			return Exercise.create({ exerciseTitle, exerciseAuthor });
+// 		},
+
+// 		removeExercise: async (parent, { exerciseId }) => {
+// 			return Exercise.findOneAndDelete({ _id: exerciseId });
+// 		},
+// 	},
+// };
+
+// module.exports = resolvers;
+
+
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
+
+const SECRET_KEY = process.env.SECRET_KEY || 'FIT_BUDDY';
 
 const resolvers = {
-  Query: {
-    // Query to retrieve all workouts logged by the user
-    workouts: async (parent, args, { user }) => {
-      // Ensure user is authenticated
-      if (!user) {
-        throw new Error("Authentication required");
-      }
-      // Query workouts for the authenticated user
-      return Workout.find({ userId: user.id }).sort({ createdAt: -1 });
-    },
-    // Query to retrieve exercise information by ID
-    exerciseInfo: async (parent, { exerciseId }) => {
-      // Query exercise information by ID from the wger API or database
-      // Implement logic to fetch exercise info from wger API or database
-      // Example:
-      // const exerciseInfo = await Exercise.findById(exerciseId);
-      // return exerciseInfo;
-    },
-    // Query to retrieve workout history for the authenticated user
-    workoutHistory: async (parent, args, { user }) => {
-      // Ensure user is authenticated
-      if (!user) {
-        throw new Error("Authentication required");
-      }
-      // Query workout history for the authenticated user
-      return Workout.find({ userId: user.id }).sort({ date: -1 });
-    },
-  },
-  Mutation: {
-    // Mutation to log a workout for the authenticated user
-    logWorkout: async (
-      parent,
-      { exerciseId, sets, reps, weight },
-      { user }
-    ) => {
-      // Ensure user is authenticated
-      if (!user) {
-        throw new Error("Authentication required");
-      }
-      // Create a new workout entry for the authenticated user
-      const workout = new Workout({
-        userId: user.id,
-        exerciseId,
-        sets,
-        reps,
-        weight,
-        date: new Date(),
-      });
-      // Save the workout entry to the database
-      return workout.save();
-    },
-  },
-};
+	Query: {
+		
+	},
+	
+	Mutation: {
+		createUser: async (_, { username, email, password }) => {
+			const existingUser = await User.findOne({ username });
+			console.log(username, email, password);
+			if(existingUser){
+				console.log('User already exists!');
+				throw new Error('User already exists!');
+			}
+			const hashedPassword = await bcrypt.hash(password, 12);
+
+			const user = new User({
+				username,
+				email,
+				password: hashedPassword
+			});
+
+			const result = await user.save();
+			const token = jwt.sign(
+								{ userId: result.id },
+								SECRET_KEY,
+								{ expiresIn: '1h' }
+							);
+
+			return { 
+				userId: result.id, 
+				token, msg: 
+				"Signup Success!" 
+			}
+		},
+
+		login: async(_, { username, password }) => {
+			const user = await User.findOne({ username });
+			if(!user || !await bcrypt.compare(password, user.password)){
+				throw new Error("Invalid credentials");
+			}
+
+			const token = jwt.sign(
+								{ userId: user.id },
+								SECRET_KEY,
+								{ expiresIn: '1h'}
+							);
+			return { 
+				userId : user.id,
+				token,
+				msg: "Signin Success!"
+			}
+		}
+	}
+}
 
 module.exports = resolvers;

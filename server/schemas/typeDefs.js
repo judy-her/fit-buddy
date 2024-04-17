@@ -1,38 +1,40 @@
-const typeDefs = `
-  type Workout {
-    _id: ID!
-    exerciseId: ID!
-    sets: Int!
-    reps: Int!
-    weight: Float!
-    date: String!
-    user: User!
-  }
+// const typeDefs = `
+//     type Exercise {
+//         _id: ID!
+//         exerciseTitle: String!
+//         exerciseAuthor: String
+//     }
 
-  type Exercise {
-    _id: ID!
-    name: String!
-    description: String
-    category: String
-    # Define other fields as needed
-  }
+//     type Query {
+//         exercises: [Exercise!]!
+//         exercise(exerciseId: ID!): Exercise
+//     }
 
-  type User {
-    _id: ID!
-    username: String!
-    email: String!
-    # Define other fields as needed
-  }
+//     type Mutation {
+//         addExercise(exerciseTitle: String!, exerciseAuthor: String!): Exercise
+//         removeExercise(exerciseId: ID!): Exercise
+//     }
+// `;
 
-  type Query {
-    workouts: [Workout]!
-    exerciseInfo(exerciseId: ID!): Exercise
-    workoutHistory: [Workout]!
-  }
+// module.exports = typeDefs;
 
-  type Mutation {
-    logWorkout(exerciseId: ID!, sets: Int!, reps: Int!, weight: Float!): Workout
-  }
+const { gql } = require('apollo-server-express');
+
+const typeDefs = gql`
+    type AuthData {
+        userId: ID!,
+        token: String!,
+        msg: String!
+    }
+
+    type Query {
+        _dummy: String
+    }
+
+    type Mutation {
+        login(username: String!, password: String!): AuthData!,
+        createUser(username: String!, email: String!, password: String!): AuthData!
+    }
 `;
 
 module.exports = typeDefs;

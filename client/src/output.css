@@ -446,11 +446,6 @@ video {
   display: none;
 }
 
-:root, [data-theme] {
-  color: hsl(var(--nextui-foreground));
-  background-color: hsl(var(--nextui-background));
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -559,340 +554,378 @@ video {
   --tw-contain-style:  ;
 }
 
-.light,[data-theme="light"] {
-  color-scheme: light;
-  --nextui-background: 0 0% 100%;
-  --nextui-foreground-50: 0 0% 98%;
-  --nextui-foreground-100: 240 5% 96%;
-  --nextui-foreground-200: 240 6% 90%;
-  --nextui-foreground-300: 240 5% 84%;
-  --nextui-foreground-400: 240 5% 65%;
-  --nextui-foreground-500: 240 4% 46%;
-  --nextui-foreground-600: 240 5% 34%;
-  --nextui-foreground-700: 240 5% 26%;
-  --nextui-foreground-800: 240 4% 16%;
-  --nextui-foreground-900: 240 6% 10%;
-  --nextui-foreground: 202 24% 9%;
-  --nextui-divider: 0 0% 7%;
-  --nextui-divider-opacity: 0.15;
-  --nextui-focus: 212 100% 47%;
-  --nextui-overlay: 0 0% 0%;
-  --nextui-content1: 0 0% 100%;
-  --nextui-content1-foreground: 202 24% 9%;
-  --nextui-content2: 240 5% 96%;
-  --nextui-content2-foreground: 240 4% 16%;
-  --nextui-content3: 240 6% 90%;
-  --nextui-content3-foreground: 240 5% 26%;
-  --nextui-content4: 240 5% 84%;
-  --nextui-content4-foreground: 240 5% 34%;
-  --nextui-default-50: 0 0% 98%;
-  --nextui-default-100: 240 5% 96%;
-  --nextui-default-200: 240 6% 90%;
-  --nextui-default-300: 240 5% 84%;
-  --nextui-default-400: 240 5% 65%;
-  --nextui-default-500: 240 4% 46%;
-  --nextui-default-600: 240 5% 34%;
-  --nextui-default-700: 240 5% 26%;
-  --nextui-default-800: 240 4% 16%;
-  --nextui-default-900: 240 6% 10%;
-  --nextui-default-foreground: 0 0% 0%;
-  --nextui-default: 240 5% 84%;
-  --nextui-primary-50: 213 92% 95%;
-  --nextui-primary-100: 212 92% 90%;
-  --nextui-primary-200: 212 92% 79%;
-  --nextui-primary-300: 212 92% 69%;
-  --nextui-primary-400: 212 92% 58%;
-  --nextui-primary-500: 212 100% 47%;
-  --nextui-primary-600: 212 100% 38%;
-  --nextui-primary-700: 212 100% 29%;
-  --nextui-primary-800: 212 100% 19%;
-  --nextui-primary-900: 212 100% 10%;
-  --nextui-primary-foreground: 0 0% 100%;
-  --nextui-primary: 212 100% 47%;
-  --nextui-secondary-50: 270 62% 95%;
-  --nextui-secondary-100: 270 59% 89%;
-  --nextui-secondary-200: 270 59% 79%;
-  --nextui-secondary-300: 270 59% 68%;
-  --nextui-secondary-400: 270 59% 58%;
-  --nextui-secondary-500: 270 67% 47%;
-  --nextui-secondary-600: 270 67% 38%;
-  --nextui-secondary-700: 270 67% 28%;
-  --nextui-secondary-800: 270 67% 19%;
-  --nextui-secondary-900: 270 67% 9%;
-  --nextui-secondary-foreground: 0 0% 100%;
-  --nextui-secondary: 270 67% 47%;
-  --nextui-success-50: 147 64% 95%;
-  --nextui-success-100: 146 61% 89%;
-  --nextui-success-200: 146 62% 77%;
-  --nextui-success-300: 146 63% 66%;
-  --nextui-success-400: 146 62% 55%;
-  --nextui-success-500: 146 79% 44%;
-  --nextui-success-600: 146 80% 35%;
-  --nextui-success-700: 146 79% 26%;
-  --nextui-success-800: 146 80% 17%;
-  --nextui-success-900: 146 78% 9%;
-  --nextui-success-foreground: 0 0% 0%;
-  --nextui-success: 146 79% 44%;
-  --nextui-warning-50: 55 92% 95%;
-  --nextui-warning-100: 37 91% 91%;
-  --nextui-warning-200: 37 91% 82%;
-  --nextui-warning-300: 37 91% 73%;
-  --nextui-warning-400: 37 91% 64%;
-  --nextui-warning-500: 37 91% 55%;
-  --nextui-warning-600: 37 74% 44%;
-  --nextui-warning-700: 37 74% 33%;
-  --nextui-warning-800: 37 75% 22%;
-  --nextui-warning-900: 37 75% 11%;
-  --nextui-warning-foreground: 0 0% 0%;
-  --nextui-warning: 37 91% 55%;
-  --nextui-danger-50: 339 92% 95%;
-  --nextui-danger-100: 340 92% 90%;
-  --nextui-danger-200: 339 90% 80%;
-  --nextui-danger-300: 339 91% 71%;
-  --nextui-danger-400: 339 90% 61%;
-  --nextui-danger-500: 339 90% 51%;
-  --nextui-danger-600: 339 87% 41%;
-  --nextui-danger-700: 339 86% 31%;
-  --nextui-danger-800: 339 87% 20%;
-  --nextui-danger-900: 340 85% 10%;
-  --nextui-danger-foreground: 0 0% 100%;
-  --nextui-danger: 339 90% 51%;
-  --nextui-spacing-unit: 4px;
-  --nextui-spacing-unit-0: 0px;
-  --nextui-spacing-unit-1: 0.25rem;
-  --nextui-spacing-unit-2: 0.5rem;
-  --nextui-spacing-unit-3: 0.75rem;
-  --nextui-spacing-unit-4: 1rem;
-  --nextui-spacing-unit-5: 1.25rem;
-  --nextui-spacing-unit-6: 1.5rem;
-  --nextui-spacing-unit-7: 1.75rem;
-  --nextui-spacing-unit-8: 2rem;
-  --nextui-spacing-unit-9: 2.25rem;
-  --nextui-spacing-unit-10: 2.5rem;
-  --nextui-spacing-unit-11: 2.75rem;
-  --nextui-spacing-unit-12: 3rem;
-  --nextui-spacing-unit-13: 3.25rem;
-  --nextui-spacing-unit-14: 3.5rem;
-  --nextui-spacing-unit-15: 3.75rem;
-  --nextui-spacing-unit-16: 4rem;
-  --nextui-spacing-unit-17: 4.25rem;
-  --nextui-spacing-unit-18: 4.5rem;
-  --nextui-spacing-unit-20: 5rem;
-  --nextui-spacing-unit-24: 6rem;
-  --nextui-spacing-unit-28: 7rem;
-  --nextui-spacing-unit-32: 8rem;
-  --nextui-spacing-unit-36: 9rem;
-  --nextui-spacing-unit-40: 10rem;
-  --nextui-spacing-unit-44: 11rem;
-  --nextui-spacing-unit-48: 12rem;
-  --nextui-spacing-unit-52: 13rem;
-  --nextui-spacing-unit-56: 14rem;
-  --nextui-spacing-unit-60: 15rem;
-  --nextui-spacing-unit-64: 16rem;
-  --nextui-spacing-unit-72: 18rem;
-  --nextui-spacing-unit-80: 20rem;
-  --nextui-spacing-unit-96: 24rem;
-  --nextui-spacing-unit-xs: 0.5rem;
-  --nextui-spacing-unit-sm: 0.75rem;
-  --nextui-spacing-unit-md: 1rem;
-  --nextui-spacing-unit-lg: 1.375rem;
-  --nextui-spacing-unit-xl: 2.25rem;
-  --nextui-spacing-unit-2xl: 3rem;
-  --nextui-spacing-unit-3xl: 5rem;
-  --nextui-spacing-unit-4xl: 7.5rem;
-  --nextui-spacing-unit-5xl: 14rem;
-  --nextui-spacing-unit-6xl: 18rem;
-  --nextui-spacing-unit-7xl: 24rem;
-  --nextui-spacing-unit-8xl: 32rem;
-  --nextui-spacing-unit-9xl: 40rem;
-  --nextui-spacing-unit-3_5: 0.875rem;
-  --nextui-disabled-opacity: .5;
-  --nextui-divider-weight: 1px;
-  --nextui-font-size-tiny: 0.75rem;
-  --nextui-font-size-small: 0.875rem;
-  --nextui-font-size-medium: 1rem;
-  --nextui-font-size-large: 1.125rem;
-  --nextui-line-height-tiny: 1rem;
-  --nextui-line-height-small: 1.25rem;
-  --nextui-line-height-medium: 1.5rem;
-  --nextui-line-height-large: 1.75rem;
-  --nextui-radius-small: 2px;
-  --nextui-radius-medium: 4px;
-  --nextui-radius-large: 6px;
-  --nextui-border-width-small: 1px;
-  --nextui-border-width-medium: 2px;
-  --nextui-border-width-large: 3px;
-  --nextui-box-shadow-small: 0px 0px 5px 0px rgb(0 0 0 / 0.02), 0px 2px 10px 0px rgb(0 0 0 / 0.06), 0px 0px 1px 0px rgb(0 0 0 / 0.3);
-  --nextui-box-shadow-medium: 0px 0px 15px 0px rgb(0 0 0 / 0.03), 0px 2px 30px 0px rgb(0 0 0 / 0.08), 0px 0px 1px 0px rgb(0 0 0 / 0.3);
-  --nextui-box-shadow-large: 0px 0px 30px 0px rgb(0 0 0 / 0.04), 0px 30px 60px 0px rgb(0 0 0 / 0.12), 0px 0px 1px 0px rgb(0 0 0 / 0.3);
-  --nextui-hover-opacity: .8;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-:root,.dark,[data-theme="dark"] {
-  color-scheme: dark;
-  --nextui-background: 0 0% 0%;
-  --nextui-foreground-50: 240 6% 10%;
-  --nextui-foreground-100: 240 4% 16%;
-  --nextui-foreground-200: 240 5% 26%;
-  --nextui-foreground-300: 240 5% 34%;
-  --nextui-foreground-400: 240 4% 46%;
-  --nextui-foreground-500: 240 5% 65%;
-  --nextui-foreground-600: 240 5% 84%;
-  --nextui-foreground-700: 240 6% 90%;
-  --nextui-foreground-800: 240 5% 96%;
-  --nextui-foreground-900: 0 0% 98%;
-  --nextui-foreground: 210 6% 93%;
-  --nextui-focus: 212 100% 47%;
-  --nextui-overlay: 0 0% 0%;
-  --nextui-divider: 0 0% 100%;
-  --nextui-divider-opacity: 0.15;
-  --nextui-content1: 240 6% 10%;
-  --nextui-content1-foreground: 0 0% 98%;
-  --nextui-content2: 240 4% 16%;
-  --nextui-content2-foreground: 240 5% 96%;
-  --nextui-content3: 240 5% 26%;
-  --nextui-content3-foreground: 240 6% 90%;
-  --nextui-content4: 240 5% 34%;
-  --nextui-content4-foreground: 240 5% 84%;
-  --nextui-default-50: 240 6% 10%;
-  --nextui-default-100: 240 4% 16%;
-  --nextui-default-200: 240 5% 26%;
-  --nextui-default-300: 240 5% 34%;
-  --nextui-default-400: 240 4% 46%;
-  --nextui-default-500: 240 5% 65%;
-  --nextui-default-600: 240 5% 84%;
-  --nextui-default-700: 240 6% 90%;
-  --nextui-default-800: 240 5% 96%;
-  --nextui-default-900: 0 0% 98%;
-  --nextui-default-foreground: 0 0% 100%;
-  --nextui-default: 240 5% 26%;
-  --nextui-primary-50: 212 100% 10%;
-  --nextui-primary-100: 212 100% 19%;
-  --nextui-primary-200: 212 100% 29%;
-  --nextui-primary-300: 212 100% 38%;
-  --nextui-primary-400: 212 100% 47%;
-  --nextui-primary-500: 212 92% 58%;
-  --nextui-primary-600: 212 92% 69%;
-  --nextui-primary-700: 212 92% 79%;
-  --nextui-primary-800: 212 92% 90%;
-  --nextui-primary-900: 213 92% 95%;
-  --nextui-primary-foreground: 0 0% 100%;
-  --nextui-primary: 212 100% 47%;
-  --nextui-secondary-50: 270 67% 9%;
-  --nextui-secondary-100: 270 67% 19%;
-  --nextui-secondary-200: 270 67% 28%;
-  --nextui-secondary-300: 270 67% 38%;
-  --nextui-secondary-400: 270 67% 47%;
-  --nextui-secondary-500: 270 59% 58%;
-  --nextui-secondary-600: 270 59% 68%;
-  --nextui-secondary-700: 270 59% 79%;
-  --nextui-secondary-800: 270 59% 89%;
-  --nextui-secondary-900: 270 62% 95%;
-  --nextui-secondary-foreground: 0 0% 100%;
-  --nextui-secondary: 270 59% 58%;
-  --nextui-success-50: 146 78% 9%;
-  --nextui-success-100: 146 80% 17%;
-  --nextui-success-200: 146 79% 26%;
-  --nextui-success-300: 146 80% 35%;
-  --nextui-success-400: 146 79% 44%;
-  --nextui-success-500: 146 62% 55%;
-  --nextui-success-600: 146 63% 66%;
-  --nextui-success-700: 146 62% 77%;
-  --nextui-success-800: 146 61% 89%;
-  --nextui-success-900: 147 64% 95%;
-  --nextui-success-foreground: 0 0% 0%;
-  --nextui-success: 146 79% 44%;
-  --nextui-warning-50: 37 75% 11%;
-  --nextui-warning-100: 37 75% 22%;
-  --nextui-warning-200: 37 74% 33%;
-  --nextui-warning-300: 37 74% 44%;
-  --nextui-warning-400: 37 91% 55%;
-  --nextui-warning-500: 37 91% 64%;
-  --nextui-warning-600: 37 91% 73%;
-  --nextui-warning-700: 37 91% 82%;
-  --nextui-warning-800: 37 91% 91%;
-  --nextui-warning-900: 55 92% 95%;
-  --nextui-warning-foreground: 0 0% 0%;
-  --nextui-warning: 37 91% 55%;
-  --nextui-danger-50: 340 85% 10%;
-  --nextui-danger-100: 339 87% 20%;
-  --nextui-danger-200: 339 86% 31%;
-  --nextui-danger-300: 339 87% 41%;
-  --nextui-danger-400: 339 90% 51%;
-  --nextui-danger-500: 339 90% 61%;
-  --nextui-danger-600: 339 91% 71%;
-  --nextui-danger-700: 339 90% 80%;
-  --nextui-danger-800: 340 92% 90%;
-  --nextui-danger-900: 339 92% 95%;
-  --nextui-danger-foreground: 0 0% 100%;
-  --nextui-danger: 339 90% 51%;
-  --nextui-spacing-unit: 4px;
-  --nextui-spacing-unit-0: 0px;
-  --nextui-spacing-unit-1: 0.25rem;
-  --nextui-spacing-unit-2: 0.5rem;
-  --nextui-spacing-unit-3: 0.75rem;
-  --nextui-spacing-unit-4: 1rem;
-  --nextui-spacing-unit-5: 1.25rem;
-  --nextui-spacing-unit-6: 1.5rem;
-  --nextui-spacing-unit-7: 1.75rem;
-  --nextui-spacing-unit-8: 2rem;
-  --nextui-spacing-unit-9: 2.25rem;
-  --nextui-spacing-unit-10: 2.5rem;
-  --nextui-spacing-unit-11: 2.75rem;
-  --nextui-spacing-unit-12: 3rem;
-  --nextui-spacing-unit-13: 3.25rem;
-  --nextui-spacing-unit-14: 3.5rem;
-  --nextui-spacing-unit-15: 3.75rem;
-  --nextui-spacing-unit-16: 4rem;
-  --nextui-spacing-unit-17: 4.25rem;
-  --nextui-spacing-unit-18: 4.5rem;
-  --nextui-spacing-unit-20: 5rem;
-  --nextui-spacing-unit-24: 6rem;
-  --nextui-spacing-unit-28: 7rem;
-  --nextui-spacing-unit-32: 8rem;
-  --nextui-spacing-unit-36: 9rem;
-  --nextui-spacing-unit-40: 10rem;
-  --nextui-spacing-unit-44: 11rem;
-  --nextui-spacing-unit-48: 12rem;
-  --nextui-spacing-unit-52: 13rem;
-  --nextui-spacing-unit-56: 14rem;
-  --nextui-spacing-unit-60: 15rem;
-  --nextui-spacing-unit-64: 16rem;
-  --nextui-spacing-unit-72: 18rem;
-  --nextui-spacing-unit-80: 20rem;
-  --nextui-spacing-unit-96: 24rem;
-  --nextui-spacing-unit-xs: 0.5rem;
-  --nextui-spacing-unit-sm: 0.75rem;
-  --nextui-spacing-unit-md: 1rem;
-  --nextui-spacing-unit-lg: 1.375rem;
-  --nextui-spacing-unit-xl: 2.25rem;
-  --nextui-spacing-unit-2xl: 3rem;
-  --nextui-spacing-unit-3xl: 5rem;
-  --nextui-spacing-unit-4xl: 7.5rem;
-  --nextui-spacing-unit-5xl: 14rem;
-  --nextui-spacing-unit-6xl: 18rem;
-  --nextui-spacing-unit-7xl: 24rem;
-  --nextui-spacing-unit-8xl: 32rem;
-  --nextui-spacing-unit-9xl: 40rem;
-  --nextui-spacing-unit-3_5: 0.875rem;
-  --nextui-disabled-opacity: .5;
-  --nextui-divider-weight: 1px;
-  --nextui-font-size-tiny: 0.75rem;
-  --nextui-font-size-small: 0.875rem;
-  --nextui-font-size-medium: 1rem;
-  --nextui-font-size-large: 1.125rem;
-  --nextui-line-height-tiny: 1rem;
-  --nextui-line-height-small: 1.25rem;
-  --nextui-line-height-medium: 1.5rem;
-  --nextui-line-height-large: 1.75rem;
-  --nextui-radius-small: 2px;
-  --nextui-radius-medium: 4px;
-  --nextui-radius-large: 6px;
-  --nextui-border-width-small: 1px;
-  --nextui-border-width-medium: 2px;
-  --nextui-border-width-large: 3px;
-  --nextui-box-shadow-small: 0px 0px 5px 0px rgb(0 0 0 / 0.05), 0px 2px 10px 0px rgb(0 0 0 / 0.2), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15);
-  --nextui-box-shadow-medium: 0px 0px 15px 0px rgb(0 0 0 / 0.06), 0px 2px 30px 0px rgb(0 0 0 / 0.22), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15);
-  --nextui-box-shadow-large: 0px 0px 30px 0px rgb(0 0 0 / 0.07), 0px 30px 60px 0px rgb(0 0 0 / 0.26), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15);
-  --nextui-hover-opacity: .9;
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.border-0 {
+  border-width: 0px;
+}
+
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-inset {
+  --tw-ring-inset: inset;
+}
+
+.ring-gray-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
+}
+
+:root {
+  --pale-green: rgb(231, 243, 234);
+  --apple-green: rgb(169, 206, 123);
+  --pale-peach: rgb(253, 234, 223);
+  --violet: rgb(236, 97, 159);
+  --mint-green: rgb(133, 200, 175);
+  --dark-green: rgb(72, 145, 120);
+  --coral: rgb(239, 122, 98);
+}
+
+/* Google Fonts CSS */
+
+/* Handwriting upright neat printing */
+
+.annie-use-your-telescope-regular {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Handwriting script looks like chalk */
+
+.homemade-apple-regular {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Organic-looking fat outlined letters */
+
+.rubik-scribble-regular {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Plain sans-serif typeface */
+
+.quicksand-regular {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Plain serif typeface */
+
+.lora-regular {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Handwriting plain printing with slight backwards slant */
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar styling */
+
+.navbar {
+  background-color: #c4bbbb;
+  /* Change the background color of the navbar */
+  padding: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  /* Remove bullet points */
+  padding: 0;
+  /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+  display: flex;
+  /* Display links horizontally */
+  justify-content: flex-end;
+  /* Align items to the right */
+}
+
+.nav-link {
+  text-decoration: none;
+  /* Remove default underline */
+  color: #000000;
+  /* Set link color */
+  font-size: larger;
+  padding: 1rem;
+  /* Add padding to links */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  /* Make active link bold */
+  color: #0b5021;
+  /* Change color of active link */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  /* Add underline on hover */
+}
+
+/* Styling for header  */
+
+.headerImage {
+  width: 100%;
+  /* Set the width to 100% of the viewport width */
+  height: calc( 100vw * 9 / 16 );
+  /* Calculate the height based on the 16:9 aspect ratio */
+  max-height: 200px;
+  /* Optional: Set a maximum height to prevent the image from becoming too large */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.placeholder\:text-gray-400::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-gray-400::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.hover\:bg-indigo-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.hover\:text-indigo-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(99 102 241 / var(--tw-text-opacity));
+}
+
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-inset:focus {
+  --tw-ring-inset: inset;
+}
+
+.focus\:ring-indigo-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
+}
+
+.focus-visible\:outline:focus-visible {
+  outline-style: solid;
+}
+
+.focus-visible\:outline-2:focus-visible {
+  outline-width: 2px;
+}
+
+.focus-visible\:outline-offset-2:focus-visible {
+  outline-offset: 2px;
+}
+
+.focus-visible\:outline-indigo-600:focus-visible {
+  outline-color: #4f46e5;
+}
+
+@media (min-width: 640px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:max-w-sm {
+    max-width: 24rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:leading-6 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

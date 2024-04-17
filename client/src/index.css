@@ -1,73 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --pale-green: rgb(231, 243, 234);
+    --apple-green: rgb(169, 206, 123);
+    --pale-peach: rgb(253, 234, 223);
+    --violet: rgb(236, 97, 159);
+    --mint-green: rgb(133, 200, 175);
+    --dark-green: rgb(72, 145, 120);
+    --coral: rgb(239, 122, 98);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Google Fonts CSS */
+
+/* Handwriting upright neat printing */
+.annie-use-your-telescope-regular {
+    font-family: "Annie Use Your Telescope", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-a:hover {
-  color: #535bf2;
+/* Handwriting script looks like chalk */
+.homemade-apple-regular {
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* Organic-looking fat outlined letters */
+.rubik-scribble-regular {
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Plain sans-serif typeface */
+.quicksand-regular {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+/* Plain serif typeface */
+.lora-regular {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-button:hover {
-  border-color: #646cff;
+/* Handwriting plain printing with slight backwards slant */
+.indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Navbar styling */
+.navbar {
+    background-color: #c4bbbb; /* Change the background color of the navbar */
+    padding: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display links horizontally */
+    justify-content: flex-end; /* Align items to the right */
+}
 
-  a:hover {
-    color: #747bff;
-  }
+.nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: #000000; /* Set link color */
+    font-size: larger;
+    padding: 1rem; /* Add padding to links */
+}
 
-  button {
-    background-color: #f9f9f9;
-  }
+.nav-link.active {
+    font-weight: bold; /* Make active link bold */
+    color: #0b5021; /* Change color of active link */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Styling for header  */
+.headerImage {
+    width: 100%; /* Set the width to 100% of the viewport width */
+    height: calc( 100vw * 9 / 16 ); /* Calculate the height based on the 16:9 aspect ratio */
+    max-height: 200px; /* Optional: Set a maximum height to prevent the image from becoming too large */
+    object-fit: cover;
 }

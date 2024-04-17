@@ -1,37 +1,48 @@
-const express = require("express");
-const { ApolloServer } = require("apollo-server-express");
-const path = require("path");
+const express = require('express');
+const cors = require('cors');
+const { ApolloServer } = require('@apollo/server');
+const { expressMiddleware } = require('@apollo/server/express4');
+const path = require('path');
+require('dotenv').config();
 
-const { typeDefs, resolvers } = require("./schemas");
-const db = require("./config/connection");
+const { typeDefs, resolvers } = require('./schemas');
+const connectDB = require('./config/connection');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3008;
+
 const app = express();
 
-// Create an Apollo Server instance
+
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+    typeDefs,
+    resolvers,
 });
 
-// Apply Apollo middleware to Express
-server.applyMiddleware({ app });
+const startApolloServer = async () => {
+    await server.start();
 
-// Serve static files if in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
+    app.use(express.urlencoded({ extended: true }));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
-  });
-}
+    app.use('/graphql', 
+            cors(),
+            express.json(),
+            expressMiddleware(server)
+        );
 
-// Start the server
-db.once("open", () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-    console.log(
-      `GraphQL server running at http://localhost:${PORT}${server.graphqlPath}`
-    );
-  });
-});
+    if (process.env.NODE_ENV === 'production') {
+        app.use(express.static(path.join(__dirname, '../client/dist')));
+
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+        });
+    }
+
+    connectDB();
+
+    app.listen(PORT, () => {
+        console.log(`API server running on port ${PORT}!`);
+        console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+    })
+};
+
+startApolloServer();
