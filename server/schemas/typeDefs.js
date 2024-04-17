@@ -1,51 +1,40 @@
-const typeDefs = `
+// const typeDefs = `
+//     type Exercise {
+//         _id: ID!
+//         exerciseTitle: String!
+//         exerciseAuthor: String
+//     }
 
-type Category{
-    _id: ID
-    name : String
-}
+//     type Query {
+//         exercises: [Exercise!]!
+//         exercise(exerciseId: ID!): Exercise
+//     }
 
-type Exercise {
-    _id: ID!
-    title: String!
-    description: String!
-    price: Float!
-    date: String!
-    creator: User!
-}
+//     type Mutation {
+//         addExercise(exerciseTitle: String!, exerciseAuthor: String!): Exercise
+//         removeExercise(exerciseId: ID!): Exercise
+//     }
+// `;
 
- type User {
-    _id :ID!
-    firstName: String!
-    lastName: String!
-    email : String!
- 
- }
+// module.exports = typeDefs;
 
-type Query {
-    categories : [Category]
-    exercises(category: ID, name: String) :[Exercise]
-    exercise(_id: ID!) : Exercise  
-}
+const { gql } = require('apollo-server-express');
 
-type Mutation {
-    addUser(
-      firstName: String!
-      lastName: String!
-      email: String!
-      password: String!
-    ): User
-  
-    updateUser(
-      firstName: String
-      lastName: String
-      email: String
-      password: String
-    ): User
+const typeDefs = gql`
+    type AuthData {
+        userId: ID!,
+        token: String!,
+        msg: String!
+    }
 
-    addExercise(exercise: [ID]!): Exercise
- 
-  }
+    type Query {
+        _dummy: String
+    }
+
+    type Mutation {
+        login(username: String!, password: String!): AuthData!,
+        createUser(username: String!, email: String!, password: String!): AuthData!
+    }
 `;
 
 module.exports = typeDefs;

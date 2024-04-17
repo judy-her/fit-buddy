@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --pale-green: rgb(231, 243, 234);
     --apple-green: rgb(169, 206, 123);
@@ -6,90 +10,88 @@
     --mint-green: rgb(133, 200, 175);
     --dark-green: rgb(72, 145, 120);
     --coral: rgb(239, 122, 98);
-  }
-  
-  /* Google Fonts CSS */
-  
-  /* Handwriting upright neat printing */
-  .annie-use-your-telescope-regular {
+}
+
+/* Google Fonts CSS */
+
+/* Handwriting upright neat printing */
+.annie-use-your-telescope-regular {
     font-family: "Annie Use Your Telescope", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /* Handwriting script looks like chalk */
-  .homemade-apple-regular {
+}
+
+/* Handwriting script looks like chalk */
+.homemade-apple-regular {
     font-family: "Homemade Apple", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /* Organic-looking fat outlined letters */
-  .rubik-scribble-regular {
+}
+
+/* Organic-looking fat outlined letters */
+.rubik-scribble-regular {
     font-family: "Rubik Scribble", system-ui;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /* Plain sans-serif typeface */
-  .quicksand-regular {
+}
+
+/* Plain sans-serif typeface */
+.quicksand-regular {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  /* Plain serif typeface */
-  .lora-regular {
+}
+
+/* Plain serif typeface */
+.lora-regular {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /* Handwriting plain printing with slight backwards slant */
-  .indie-flower-regular {
+}
+
+/* Handwriting plain printing with slight backwards slant */
+.indie-flower-regular {
     font-family: "Indie Flower", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  /* Navbar styling */
-  .navbar {
+}
+
+/* Navbar styling */
+.navbar {
     background-color: #c4bbbb; /* Change the background color of the navbar */
     padding: 1rem;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     list-style: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
     display: flex; /* Display links horizontally */
     justify-content: flex-end; /* Align items to the right */
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     text-decoration: none; /* Remove default underline */
     color: #000000; /* Set link color */
     font-size: larger;
     padding: 1rem; /* Add padding to links */
-  }
-  
-  .nav-link.active {
+}
+
+.nav-link.active {
     font-weight: bold; /* Make active link bold */
     color: #0b5021; /* Change color of active link */
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     text-decoration: underline; /* Add underline on hover */
-  }
-  
-  /* Styling for header  */
-  .headerImage {
+}
+
+/* Styling for header  */
+.headerImage {
     width: 100%; /* Set the width to 100% of the viewport width */
-    height: calc(
-      100vw * 9 / 16
-    ); /* Calculate the height based on the 16:9 aspect ratio */
+    height: calc( 100vw * 9 / 16 ); /* Calculate the height based on the 16:9 aspect ratio */
     max-height: 200px; /* Optional: Set a maximum height to prevent the image from becoming too large */
     object-fit: cover;
-  }
+}
